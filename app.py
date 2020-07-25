@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request
 from flask_cors import CORS
 app = Flask (__name__)
 CORS(app)
@@ -28,7 +28,7 @@ def predict(network, x):
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html')
+    return 'Hello World'
 
 @app.route('/number', methods=['POST'])
 def number():
